@@ -1,7 +1,6 @@
 import random
 from statistics import mode,median, mean
 
-'''
 ##1) Escribir un programa que solicite la edad del usuario. Si el usuario es mayor de 18 años,
 ##deberá mostrar un mensaje en pantalla que diga “Es mayor de edad”.
 
@@ -137,23 +136,35 @@ elif 6 <= magnitud < 7:
     print("Muy Fuerte (puede causar daños significativos)")
 elif magnitud >= 7:
     print("Extremo (puede causar graves daños a gran escala).")
-'''
+
 ##10) Escribir un programa que pregunte al usuario en cuál hemisferio se encuentra (N/S), qué mes
 ##del año es y qué día es. El programa deberá utilizar esa información para imprimir por pantalla
 ##si el usuario se encuentra en otoño, invierno, primavera o verano.
 
-hemisferio = input("Ingrese (N)orte o (S)ur de acuerdo al hemisferio en el que te encuentras")
-mes = int(input("Ingrese un numero del 1-12 para el mes actual"))
-dia = int(input("Ingrese el dia actual"))
-
-if mes == 12 OR mes <= 3:
-    if mes == 12 AND dia > 21:
-    
-    elif mes == 3 AND dia < 20:
-
-##arreglar este asco
+hemisferio = input("Ingrese (N)orte o (S)ur de acuerdo al hemisferio en el que te encuentras \n").lower()
+mes = int(input("Ingrese un numero del 1-12 para el mes actual \n"))
+dia = int(input("Ingrese el dia actual \n"))
 
 
+if (mes == 12 and dia >= 21) or (mes == 1) or (mes == 2) or (mes == 3 and dia < 21):
+    if hemisferio == "n":
+        estacion = "primavera"
+    elif hemisferio == "s":
+        estacion = "otoño"
+elif (mes == 3 and dia >= 21) or (mes == 4) or (mes == 5) or (mes == 6 and dia < 21):
+    if hemisferio == "n":
+        estacion = "primavera"
+    elif hemisferio == "s":
+        estacion = "otoño"
+elif (mes == 6 and dia >= 21) or (mes == 7) or (mes == 8) or (mes == 9 and dia < 23):
+    if hemisferio == "n":
+        estacion = "verano"
+    elif hemisferio == "s":
+        estacion = "invierno"
+elif (mes == 9 and dia >= 23) or (mes == 10) or (mes == 11) or (mes == 12 and dia < 21):
+    if hemisferio == "n":
+        estacion = "otoño"
+    elif hemisferio == "s":
+        estacion = "primavera"
 
-
-
+print(f"La estación es {estacion}!")
