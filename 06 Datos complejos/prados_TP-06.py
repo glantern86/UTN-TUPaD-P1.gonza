@@ -1,4 +1,3 @@
-'''
 ##1) Crear una lista con los números del 1 al 100 que sean múltiplos de 4. Utilizar la función
 ##range.
 
@@ -56,7 +55,36 @@ autos[1]="pollo"
 autos[2]="duran duran"
 
 print(autos)
-'''
+
+##8) Crear una lista vacía llamada "dobles" y agregar el doble de 5, 10 y 15 usando append
+##directamente. Imprimir la lista resultante por pantalla.
+
+dobles = []
+dobles.append(5*2)
+dobles.append(10*2)
+dobles.append(15*2)
+
+print(dobles)
+
+##9) Dada la lista “compras”, cuyos elementos representan los productos comprados por
+##diferentes clientes:
+
+compras = [["pan", "leche"], ["arroz", "fideos", "salsa"], ["agua"]]
+compras[2].append("jugo")
+compras[1][1]="tallarines"
+compras[0].remove("pan")
+print(compras)
 
 
+##10) Elaborar una lista anidada llamada “lista_anidada” que contenga los siguientes elementos:
+##●​ Posición lista_anidada[0]: 15
+##●​ Posición lista_anidada[1]: True
+##●​ Posición lista_anidada[2][0]: 25.5
+##●​ Posición lista_anidada[2][1]: 57.9
+##●​ Posición lista_anidada[2][2]: 30.6
+##●​ Posición lista_anidada[3]: False
+##Imprimir la lista resultante por pantalla.
+
+lista_anidada = [[15],[True],[25.5, 57.9, 30.6],[False]]
+print(lista_anidada)
 
