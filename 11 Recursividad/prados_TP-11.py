@@ -77,4 +77,33 @@ def suma_digitos(n):
         return suma_digitos(n//10) + n%10
 
 print(suma_digitos(5107))
-        
+
+##7) Un niño está construyendo una pirámide con bloques. En el nivel más bajo coloca n
+##bloques, en el siguiente nivel uno menos (n - 1), y así sucesivamente hasta llegar al
+##último nivel con un solo bloque.
+##Escribí una función recursiva contar_bloques(n) que reciba el número de bloques en el
+##nivel más bajo y devuelva el total de bloques que necesita para construir toda la
+##pirámide.
+
+def contar_bloques(n):
+    if n ==1:
+        return 1
+    else:
+        return n+contar_bloques(n-1)
+    
+print(contar_bloques(12))
+
+##8) Escribí una función recursiva llamada contar_digito(numero, digito) que reciba un
+##número entero positivo (numero) y un dígito (entre 0 y 9), y devuelva cuántas veces
+##aparece ese dígito dentro del número.
+
+def contar_digito(numero, digito):
+    if numero == 0:
+        return 0
+    elif numero % 10 == digito:
+        return 1 + contar_digito(numero // 10, digito)
+    else:
+        return contar_digito(numero // 10, digito)
+
+
+print(contar_digito(98798799, 9))
